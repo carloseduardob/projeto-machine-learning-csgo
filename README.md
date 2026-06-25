@@ -10,7 +10,7 @@ Trabalho final da disciplina **Machine Learning Clássico**: prever o vencedor d
 |------------|--------|
 | **Pedro Ernesto** ([Theordep](https://github.com/Theordep)) | Ideia, modelagem, pipeline Colab, merges |
 | **Carlos Eduardo** | EDA, pré-processamento, fundamentação do jogo |
-| **Karen** | Documentação, relatório ABNT, slides e apresentação |
+| **Karine** | Documentação, relatório ABNT, slides e apresentação |
 
 ## Abrir no Google Colab (recomendado)
 

@@ -13,9 +13,9 @@
 
 | Parte | Título | Notebook | Colab | Tempo | Integrante(s) |
 |-------|--------|----------|-------|-------|---------------|
-| **1** | Problema, dataset e EDA | `01_EDA.ipynb` | Parte 01 | ~4 min | Karen + Carlos |
+| **1** | Problema, dataset e EDA | `01_EDA.ipynb` | Parte 01 | ~4 min | Karine + Carlos |
 | **2** | Pré-processamento e features | `02_Preprocessamento.ipynb` | Parte 02 | ~4 min | Carlos + Pedro |
-| **3** | Modelagem, métricas e conclusão | `03_Modelagem.ipynb` | Parte 03 | ~5 min | Pedro + Karen |
+| **3** | Modelagem, métricas e conclusão | `03_Modelagem.ipynb` | Parte 03 | ~5 min | Pedro + Karine |
 
 **Setup (`00_Setup_Colab`)** — não precisa de slide dedicado; citar só na demo final: *“Roda no Google Colab; o dataset baixa automaticamente via kagglehub.”*
 
@@ -53,7 +53,7 @@
 | Nulos | 0 |
 | Origem | Skybox AI Challenge (~700 demos profissionais, 2019–2020) |
 
-## Fala sugerida — Karen (abertura, ~1 min)
+## Fala sugerida — Karine (abertura, ~1 min)
 
 > “Em partidas de CS:GO, cada round começa com decisões de economia e compra de armas. Nosso projeto usa Machine Learning para estimar quem vence o round com base nesses dados — algo que hoje ainda depende muito de intuição do jogador ou treinador.”
 
@@ -198,7 +198,7 @@ Após filtros: (33365, ...)
 
 > “Comparamos quatro classificadores — Regressão Logística, SVM, KNN e Random Forest — com GridSearchCV e métrica F1. O Random Forest foi o melhor, com F1 de 0,90. Na regressão complementar, prevendo a diferença de dinheiro, o RF também superou a regressão linear. As métricas ficam salvas em `model_results.json` e os gráficos em `reports/figures`.”
 
-## Fala sugerida — Karen (fechamento, ~2 min)
+## Fala sugerida — Karine (fechamento, ~2 min)
 
 > “Concluímos que Machine Learning clássico consegue estimar bem a vitória do round a partir de economia e armamento, mas a economia sozinha não basta. Tudo é reproduzível no Google Colab pelo link do GitHub. Obrigado — perguntas?”
 
@@ -216,7 +216,7 @@ Após filtros: (33365, ...)
 
 | Integrante | Partes | Foco |
 |------------|--------|------|
-| **Karen** | 1 (abertura) + 3 (fechamento) | Problema, slides, conclusão, demo |
+| **Karine** | 1 (abertura) + 3 (fechamento) | Problema, slides, conclusão, demo |
 | **Carlos Eduardo** | 1 (EDA) + 2 | Dataset, gráficos, filtros, features |
 | **Pedro Ernesto** | 2 (pipeline) + 3 (modelos) | Colab, modelagem, métricas, RF vs KNN |
 

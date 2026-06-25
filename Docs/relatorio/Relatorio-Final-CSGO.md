@@ -7,7 +7,7 @@
 > **Para entrega formal:** transcrever este documento para Word conforme ABNT (capa institucional, margens, Times/Arial 12, espaçamento 1,5, sumário, numeração de figuras). Inserir figuras geradas no Colab (`reports/figures/`).
 
 **Instituição / Curso / Disciplina / Professor(a):** *(preencher)*  
-**Integrantes:** Pedro Ernesto, Carlos Eduardo, Karen  
+**Integrantes:** Pedro Ernesto, Carlos Eduardo, Karine  
 **Repositório:** https://github.com/carloseduardob/projeto-machine-learning-csgo  
 **Ano:** 2026
 

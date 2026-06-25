@@ -44,7 +44,7 @@ Times com **vantagem econômica** e **equipamento superior** tendem a vencer mai
 
 1. Notebooks reproduzíveis no **Google Colab**
 2. Relatório ABNT (`Docs/relatorio/` — issue #11)
-3. Slides e roteiro de apresentação (issue #12, Karen)
+3. Slides e roteiro de apresentação (issue #12, Karine)
 4. Repositório GitHub com issues fechadas por PR
 
 ## Equipe

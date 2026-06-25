@@ -4,7 +4,7 @@
 |------------|--------|-----------------|
 | **Pedro Ernesto** | [Theordep](https://github.com/Theordep) | Ideia do projeto, modelagem, merges, Colab setup |
 | **Carlos Eduardo** | [carloseduardob](https://github.com/carloseduardob) | EDA, pré-processamento, notebooks de análise |
-| **Karen** | — | Documentação (`Docs/`), slides, apresentação |
+| **Karine** | — | Documentação (`Docs/`), slides, apresentação |
 
 ## Repositório
 

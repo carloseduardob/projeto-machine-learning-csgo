@@ -8,7 +8,7 @@
 **Predição de vitória de round em CS:GO**  
 Machine Learning Clássico — Trabalho Final
 
-Pedro Ernesto · Carlos Eduardo · Karen  
+Pedro Ernesto · Carlos Eduardo · Karine  
 2026
 
 ---
