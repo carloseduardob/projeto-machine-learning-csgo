@@ -1,0 +1,69 @@
+{
+  "rows_used": 33365,
+  "svm_max_train_samples": 6000,
+  "classification": {
+    "logistic_regression": {
+      "best_params": {
+        "clf__C": 1.0
+      },
+      "accuracy": 0.7758,
+      "f1": 0.7713,
+      "roc_auc": 0.8784,
+      "train_samples": 26692,
+      "elapsed_seconds": 7.7
+    },
+    "random_forest": {
+      "best_params": {
+        "clf__max_depth": 20,
+        "clf__min_samples_leaf": 1
+      },
+      "accuracy": 0.9009,
+      "f1": 0.8988,
+      "roc_auc": 0.9695,
+      "train_samples": 26692,
+      "elapsed_seconds": 14.5
+    },
+    "svm_rbf": {
+      "best_params": {
+        "clf__C": 1.0,
+        "clf__gamma": "scale"
+      },
+      "accuracy": 0.785,
+      "f1": 0.7844,
+      "roc_auc": 0.8806,
+      "train_samples": 6000,
+      "elapsed_seconds": 10.0
+    },
+    "knn": {
+      "best_params": {
+        "clf__n_neighbors": 5
+      },
+      "accuracy": 0.8659,
+      "f1": 0.863,
+      "roc_auc": 0.9381,
+      "train_samples": 26692,
+      "elapsed_seconds": 7.2
+    },
+    "best_model": "random_forest"
+  },
+  "regression": {
+    "linear_regression": {
+      "best_params": {},
+      "mae": 4794.18,
+      "rmse": 6943.99,
+      "r2": 0.689,
+      "elapsed_seconds": 0.6
+    },
+    "random_forest_regressor": {
+      "best_params": {
+        "reg__max_depth": 20,
+        "reg__min_samples_leaf": 1
+      },
+      "mae": 3439.94,
+      "rmse": 5744.41,
+      "r2": 0.7872,
+      "elapsed_seconds": 67.8
+    },
+    "best_model": "random_forest_regressor"
+  }
+}

@@ -57,12 +57,17 @@ A pasta `/content/` é **efêmera** — ao desligar o runtime, some. Para persis
 2. **Runtime → Executar tudo**
 3. Abrir `01` → `02` → `03` na ordem (ou um notebook único consolidado na entrega, se a disciplina permitir)
 
-Versões de pacotes fixadas em `requirements-colab.txt` para reprodutibilidade.
+Versões extras em `requirements-colab.txt` (kagglehub, scikit-learn, seaborn). **numpy/pandas** vêm do ambiente Colab.
 
 ## Problemas comuns
 
 | Problema | Solução |
 |----------|---------|
+| Mensagens no `app.log` (deprecated, level 40) | **Normal** — avisos internos do Jupyter/Colab; ignore se as células rodam |
+| `dependency conflicts` após pip | Não use `--force-reinstall`; o projeto instala só `kagglehub`, `scikit-learn`, `seaborn` |
+| Kernel reiniciou no meio do "Executar tudo" | Atualize o notebook da `main` (removemos o `os.kill` do setup) |
+| `ImportError` numpy `_center` / sklearn | **Runtime → Reiniciar sessão** → rodar só a célula pip → **Executar tudo** |
+| `threadpoolctl` / `dlopen OSError` após classificação | Aviso conhecido no Colab com `n_jobs=-1`; notebook usa `N_JOBS=2`. Se persistir, ignore — treino costuma terminar |
 | `ModuleNotFoundError` | Rodar de novo a célula `pip install` do 00 |
 | Erro Kaggle / 403 | Verificar `kaggle.json` ou secrets |
 | Caminho do CSV errado | Usar variável `DATA_RAW` definida no 00 |
@@ -73,7 +78,7 @@ Versões de pacotes fixadas em `requirements-colab.txt` para reprodutibilidade.
 O README usa o formato:
 
 ```markdown
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Theordep/projeto-machine-learning-csgo/blob/main/notebooks/00_Setup_Colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/carloseduardob/projeto-machine-learning-csgo/blob/main/notebooks/00_Setup_Colab.ipynb)
 ```
 
 Trocar `main` pelo nome da branch se estiver testando uma issue.
