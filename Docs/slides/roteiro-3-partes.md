@@ -167,21 +167,21 @@ Após filtros: (33365, ...)
 
 | Modelo | F1 | ROC-AUC |
 |--------|-----|---------|
-| Regressão Logística | 0,774 | 0,878 |
-| SVM | 0,781 | 0,878 |
-| KNN | ~0,785 | ~0,865 |
-| **Random Forest** | **0,903** | **0,970** |
+| Regressão Logística | 0,771 | 0,878 |
+| SVM | 0,784 | 0,881 |
+| KNN (K=5) | 0,863 | 0,938 |
+| **Random Forest** | **0,899** | **0,970** |
 
 ### Regressão (`money_diff`)
 
 | Modelo | MAE | RMSE | R² |
 |--------|-----|------|-----|
-| Regressão Linear | 6.588 | 9.227 | 0,451 |
-| **Random Forest** | **4.828** | **7.896** | **0,598** |
+| Regressão Linear | 4.794 | 6.944 | 0,689 |
+| **Random Forest** | **3.440** | **5.744** | **0,787** |
 
 ## KNN — o que dizer em 30 segundos
 
-> “O **KNN** compara o round novo com os **K rounds mais parecidos** no treino — após normalizar as features — e vota na classe majoritária. Testamos K em 5, 11 e 21. Ficou competitivo com LR e SVM (~0,78 F1), mas abaixo do Random Forest, que captura melhor interações entre mapa, economia e armamento.”
+> “O **KNN** compara o round novo com os **K rounds mais parecidos** no treino — após normalizar as features — e vota na classe majoritária. Testamos K em 5, 11 e 21; o melhor foi **K=5**, com F1 **0,863**. Ficou acima de LR e SVM, mas abaixo do Random Forest, que captura melhor interações entre mapa, economia e armamento.”
 
 ## Random Forest — o que dizer em 30 segundos
 

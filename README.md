@@ -56,19 +56,19 @@ Documentação detalhada: **[Docs/guias/](Docs/guias/00-indice.md)**
 
 ### Classificação (CT vs T)
 
-| Modelo | Accuracy | F1 | ROC-AUC |
-|--------|----------|-----|---------|
-| Regressão Logística | 0,774 | 0,770 | 0,878 |
-| SVM (RBF) | 0,781 | 0,780 | 0,878 |
-| KNN | ~0,785 | ~0,782 | ~0,865 |
-| **Random Forest** | **0,904** | **0,903** | **0,970** |
+| Modelo | Accuracy | Precision | Recall | F1 | ROC-AUC |
+|--------|----------|-----------|--------|-----|---------|
+| Regressão Logística | 0,776 | 0,765 | 0,778 | 0,771 | 0,878 |
+| SVM (RBF) | 0,785 | 0,765 | 0,805 | 0,784 | 0,881 |
+| KNN (K=5) | 0,866 | 0,857 | 0,869 | 0,863 | 0,938 |
+| **Random Forest** | **0,901** | **0,892** | **0,905** | **0,899** | **0,970** |
 
 ### Regressão (`money_diff`)
 
 | Modelo | MAE | RMSE | R² |
 |--------|-----|------|-----|
-| Regressão Linear | 6.588 | 9.227 | 0,451 |
-| **Random Forest** | **4.828** | **7.896** | **0,598** |
+| Regressão Linear | 4.794 | 6.944 | 0,689 |
+| **Random Forest** | **3.440** | **5.744** | **0,787** |
 
 **Melhor modelo geral:** Random Forest (classificação e regressão).
 
@@ -103,7 +103,8 @@ kagglehub==1.0.1  scikit-learn==1.9.0  seaborn==0.13.2
 |-----------|--------|
 | Relatório ABNT (Word) | [Docs/Trabalho-CSGO-ML-ABNT.docx](Docs/Trabalho-CSGO-ML-ABNT.docx) |
 | Relatório ABNT (fonte) | [Docs/relatorio/Relatorio-Final-CSGO.md](Docs/relatorio/Relatorio-Final-CSGO.md) |
-| Slides / roteiro | [Docs/slides/](Docs/slides/) |
+| Slides | [Docs/Apresentacao-CSGO-ML.pptx](Docs/Apresentacao-CSGO-ML.pptx) |
+| Slides / roteiro (fonte) | [Docs/slides/](Docs/slides/) |
 | Código reproduzível | Notebooks Colab (este repositório) |
 
 ## Licença e dados

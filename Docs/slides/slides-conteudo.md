@@ -76,18 +76,18 @@ Otimização: GridSearchCV, métrica F1
 
 | Modelo | F1 | ROC-AUC |
 |--------|-----|---------|
-| Logistic Regression | 0,77 | 0,88 |
-| SVM | 0,78 | 0,88 |
-| KNN | ~0,78 | ~0,87 |
-| **Random Forest** | **0,90** | **0,97** |
+| Logistic Regression | 0,771 | 0,878 |
+| SVM | 0,784 | 0,881 |
+| KNN (K=5) | 0,863 | 0,938 |
+| **Random Forest** | **0,899** | **0,970** |
 
 *Figura: ROC (`10_roc_classificacao.png`)*
 
 ---
 
 ## Slide 9 — Resultados (regressão)
-- Random Forest: R² = **0,60**, RMSE ≈ 7.896  
-- Linear: R² = 0,45  
+- Random Forest: R² = **0,787**, RMSE = 5.744, MAE = 3.440  
+- Linear: R² = 0,689, RMSE = 6.944, MAE = 4.794  
 - Loadout explica parte da vantagem econômica
 
 *Figura: real vs previsto (`13_regressao_real_vs_previsto.png`)*

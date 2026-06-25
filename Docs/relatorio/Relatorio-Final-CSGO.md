@@ -57,7 +57,7 @@ Desenvolver e comparar modelos de **Machine Learning Clássico** para prever o v
 3. Implementar pré-processamento com filtros anti-leakage e feature engineering.  
 4. Treinar classificadores: **Regressão Logística, Random Forest, SVM e KNN**.  
 5. Treinar regressores: **Linear e Random Forest** para `money_diff`.  
-6. Comparar métricas (F1, ROC-AUC, MAE, RMSE, R²) e analisar feature importance.  
+6. Comparar métricas (Precision, Recall, F1, Accuracy, ROC-AUC, MAE, RMSE, R²) e analisar feature importance.  
 7. Entregar pipeline **reproduzível no Google Colab**.
 
 ---
@@ -117,6 +117,7 @@ Detalhamento e links: `Docs/slides/referencias-e-trabalhos-relacionados.md`.
 |--------|--------|
 | Balanceamento | T ≈ 51% / CT ≈ 49% |
 | Nulos | 0 |
+| Outliers (IQR) | `money_diff`: 8,2% acima do limiar IQR; mantidos por preservarem informação tática |
 | Richer wins | ~60,5% |
 | Bomba plantada | ~11% dos snapshots |
 | Leakage | Múltiplos snapshots/round → filtrar `time_left` |
@@ -167,21 +168,23 @@ Detalhamento e links: `Docs/slides/referencias-e-trabalhos-relacionados.md`.
 
 ## 5.1 Classificação (conjunto de teste ≈ 6.673 linhas)
 
-| Modelo | Accuracy | F1 | ROC-AUC |
-|--------|----------|-----|---------|
-| Regressão Logística | 0,774 | 0,770 | 0,878 |
-| SVM (RBF) | 0,781 | 0,780 | 0,878 |
-| KNN | ~0,785 | ~0,782 | ~0,865 |
-| **Random Forest** | **0,904** | **0,903** | **0,970** |
+| Modelo | Accuracy | Precision | Recall | F1 | ROC-AUC |
+|--------|----------|-----------|--------|-----|---------|
+| Regressão Logística | 0,776 | 0,765 | 0,778 | 0,771 | 0,878 |
+| SVM (RBF) | 0,785 | 0,765 | 0,805 | 0,784 | 0,881 |
+| KNN (K=5) | 0,866 | 0,857 | 0,869 | 0,863 | 0,938 |
+| **Random Forest** | **0,901** | **0,892** | **0,905** | **0,899** | **0,970** |
 
 **Melhor modelo:** Random Forest.
+
+**Justificativa das métricas:** classes equilibradas (~51% T / 49% CT), portanto Accuracy é informativa; F1 equilibra precision e recall; ROC-AUC mede a capacidade de ranquear probabilidades independente do limiar.
 
 ## 5.2 Regressão
 
 | Modelo | MAE | RMSE | R² |
 |--------|-----|------|-----|
-| Regressão Linear | 6.588 | 9.227 | 0,451 |
-| **Random Forest** | **4.828** | **7.896** | **0,598** |
+| Regressão Linear | 4.794 | 6.944 | 0,689 |
+| **Random Forest** | **3.440** | **5.744** | **0,787** |
 
 ## 5.3 Visualizações
 
@@ -204,7 +207,7 @@ Detalhamento e links: `Docs/slides/referencias-e-trabalhos-relacionados.md`.
 
 # 6. CONCLUSÃO
 
-O projeto atingiu os objetivos da disciplina: EDA, pré-processamento, comparação de múltiplos modelos clássicos (incluindo **KNN**), métricas adequadas e entrega **reproduzível no Colab**. O Random Forest obteve **F1 = 0,903** e **ROC-AUC = 0,970**, demonstrando que economia e armamento, combinados com outras variáveis táticas, predizem bem o vencedor do round — porém **não determinam** o resultado sozinhos (~60% para “time mais rico”).
+O projeto atingiu os objetivos da disciplina: EDA, pré-processamento, comparação de múltiplos modelos clássicos (incluindo **KNN**), métricas adequadas e entrega **reproduzível no Colab**. O Random Forest obteve **F1 = 0,899** e **ROC-AUC = 0,970**, demonstrando que economia e armamento, combinados com outras variáveis táticas, predizem bem o vencedor do round — porém **não determinam** o resultado sozinhos (~60% para “time mais rico”).
 
 Trabalhos futuros: dados CS2, ID de round para split agrupado, dashboard de probabilidade em tempo real.
 
